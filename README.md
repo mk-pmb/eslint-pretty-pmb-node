@@ -27,7 +27,7 @@ $ elp
 
 
 Oddities
-========
+--------
 
   * npm reports `requires a peer of eslint@* but none was installed.`
     even with eslint 3.8.0 installed. No idea. npm's
