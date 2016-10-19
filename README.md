@@ -26,7 +26,23 @@ $ elp
 
 
 
-<!--#toc stop="scan" -->
+Oddities
+========
+
+  * npm reports `requires a peer of eslint@* but none was installed.`
+    even with eslint 3.8.0 installed. No idea. npm's
+    [package.json docs](https://docs.npmjs.com/files/package.json#dependencies)
+    explicitly state that `*` "Matches any version".
+
+  * Giving a non-existing path results in `+OK no messages`.
+    That's correct behavior for this module, because when I run
+    eslint v3.8.1 on `/404/nope/doesnt_exist.js`,
+    it exists with no output and exit code 0.
+
+
+
+
+
 
 
 License
