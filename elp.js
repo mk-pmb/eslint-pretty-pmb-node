@@ -1,11 +1,22 @@
 #!/usr/bin/env nodejs
 /* -*- coding: UTF-8, tab-width: 2 -*- */
 
+'use strict';
+
 const prettyMeta = require.resolve('eslint-formatter-pretty/package.json');
 const prettyPath = require('path').resolve(prettyMeta, '..');
 
 if (process.argv.length < 3) { process.argv.push('.'); }
-process.argv.splice(2, 0, '--format=' + prettyPath);
+const scanExts = [
+  '.js',
+  '.jsm',
+  '.json',
+  '.jsx',
+  '.mjs',
+];
+process.argv.splice(2, 0,
+  '--ext', scanExts.join(','),
+  '--format=' + prettyPath);
 
 process.on('exit', function displaySuccess(retval) {
   function hadNoOutput(chan) { return (process[chan].bytesWritten === 0); }

@@ -41,6 +41,15 @@ Oddities
 
 
 
+Caveats
+-------
+
+* It scans your JSON files by default.
+  If your project has JSON files and your eslint config isn't prepared for
+  them, you'll most likely get syntax errors because eslint tries to parse
+  them as JavaScript.
+  One way to fix it is to add `eslint-plugin-json-light`.
+
 
 
 
