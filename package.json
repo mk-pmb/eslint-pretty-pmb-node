@@ -1,5 +1,5 @@
 { "name": "eslint-pretty-pmb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helps me invoke eslint with eslint-formatter-pretty.",
   "keywords": [ "eslint", "pretty" ],
 
@@ -17,12 +17,15 @@
 
   "main": "elp.js",
   "bin": { "elp": "elp.js" },
+  "scripts": { "test": "node elp.js" },
+  "eslintConfig": { "extends": "nodejs-pmb" },
 
   "dependencies": {
     "eslint-formatter-pretty": "^4.0.0",
     "find-eslint-cli-bin-js-pmb": "^0.1.0"
   },
   "devDependencies": {
+    "eslint-config-nodejs-pmb": "^0.2.5"
   },
   "peerDependencies": { "eslint": "*" },
 

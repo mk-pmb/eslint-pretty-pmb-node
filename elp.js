@@ -30,4 +30,4 @@ process.on('exit', function displaySuccess(retval) {
   }
 });
 
-require(eslintBinPath);
+require(eslintBinPath); // eslint-disable-line import/no-dynamic-require
