@@ -18,7 +18,12 @@
   "main": "elp.js",
   "bin": { "elp": "elp.js" },
 
-  "dependencies": { "eslint-formatter-pretty": "^1.1.0" },
+  "dependencies": {
+    "eslint-formatter-pretty": "^4.0.0",
+    "find-eslint-cli-bin-js-pmb": "^0.1.0"
+  },
+  "devDependencies": {
+  },
   "peerDependencies": { "eslint": "*" },
 
 

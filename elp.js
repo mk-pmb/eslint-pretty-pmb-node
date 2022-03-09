@@ -5,6 +5,7 @@
 
 const prettyMeta = require.resolve('eslint-formatter-pretty/package.json');
 const prettyPath = require('path').resolve(prettyMeta, '..');
+const eslintBinPath = require('find-eslint-cli-bin-js-pmb')(require);
 
 if (process.argv.length < 3) { process.argv.push('.'); }
 const scanExts = [
@@ -29,4 +30,4 @@ process.on('exit', function displaySuccess(retval) {
   }
 });
 
-require('eslint/bin/eslint.js');
+require(eslintBinPath);
