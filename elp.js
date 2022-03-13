@@ -7,7 +7,16 @@ const prettyMeta = require.resolve('eslint-formatter-pretty/package.json');
 const prettyPath = require('path').resolve(prettyMeta, '..');
 const eslintBinPath = require('find-eslint-cli-bin-js-pmb')(require);
 
-if (process.argv.length < 3) { process.argv.push('.'); }
+const { argv } = process;
+
+(function maybeAddDot() {
+  const ignOpts = [
+    '--fix',
+  ];
+  const maybePaths = argv.slice(2).filter(a => !ignOpts.includes(a));
+  if (maybePaths.length === 0) { argv.push('.'); }
+}());
+
 const scanExts = [
   '.js',
   '.jsm',
