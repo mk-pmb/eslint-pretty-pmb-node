@@ -32,9 +32,9 @@ process.on('exit', function displaySuccess(retval) {
   function hadNoOutput(chan) { return (process[chan].bytesWritten === 0); }
   if (hadNoOutput('stdout') && hadNoOutput('stderr')) {
     if (retval === 0) {
-      console.log('+OK no messages');
+      console.log('+OK linting passed without complaints.');
     } else {
-      console.error('-ERR code = ' + retval);
+      console.error('-ERR linter failed, code = ' + retval);
     }
   }
 });

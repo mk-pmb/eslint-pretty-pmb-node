@@ -1,5 +1,5 @@
 { "name": "eslint-pretty-pmb",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Helps me invoke eslint with eslint-formatter-pretty.",
   "keywords": [ "eslint", "pretty" ],
 
